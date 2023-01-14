@@ -1,0 +1,14 @@
+html {
+    background-color: #000000;
+    color: white;
+}
+
+span {
+    border-right: white solid 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+}
