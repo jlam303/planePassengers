@@ -72,6 +72,7 @@ function addToList() {
         
     }
 }
+var ID;
 function display(display){
     for(let i = 0; i < 8; i++){
         var x = ids[i]
@@ -79,13 +80,27 @@ function display(display){
     }
     document.getElementById("mealInfo").value = arr[display].food
     document.getElementById("extraInfo").value = arr[display].extras
-}
-function update(){
-    for(let i = 0; i < ids.length; i++){
-        (arr[i])[i] = document.getElementById(arr2[i]).value
+    for(let i = 0;i<arr.length;i++)
+    {
+        if(document.getElementById("firstNameInfo").value == arr[i].firstName && document.getElementById("lastNameInfo").value == arr[i].lastName) 
+        {
+            ID = i
+            console.log(ID)
+        }
     }
-    console.log("Doug")
 }
+let b;
+
+function updateT(){
+    
+    for(let e = 0; e < ids.length; e++)
+    {
+        b = ids[e]
+        console.log(ID)
+        arr[ID][b] = document.getElementById(arr2[e]).value
+    }
+}
+
 function print() {
     space = "";
     for (let i = 0; i < arr.length; i++) {
