@@ -16,11 +16,17 @@ class list {
         this.time = 0;
     }
 }
- 
-let arr = []
-let ids =["firstName", "lastName", "dob", "dC","aC","dD","rD","bags"]
+var doug1 = new list("Colton", "Krupp", "2005-10-05", "Phoenix", "Atlanta", "2023-01-13", "2023-01-16","1","fish", "leg ", "1001")
+var doug2 = new list("Colt", "Kru", "2006-10-05", "Phoenix", "Charleston", "2024-01-13", "2024-01-16","3","chicken", "leg hp ss ", "1002")
+var doug3 = new list("C", "K", "2007-10-05", "Phoenix", "D.C.", "2022-01-13", "2022-01-16","2","vegetarian", "leg win ", "1003")
+var arr = []
+var ids =["firstName", "lastName", "dob", "dC","aC","dD","rD","bags"]
+var arr2 =["firstNameInfo", "lastNameInfo", "dobInfo", "dCInfo","aCInfo","dDInfo","rDInfo","bagsInfo"]
+arr.push(doug1)
+arr.push(doug2)
+arr.push(doug3)
 let idCheck = 0;
-let count = 1001;
+let count = 1004;
 let meal = "";
 let extra = "";
 function addToList() {
@@ -66,20 +72,25 @@ function addToList() {
         
     }
 }
+function display(display){
+    for(let i = 0; i < 8; i++){
+        var x = ids[i]
+        document.getElementById(arr2[i]).value = (arr[display])[x]
+    }
+    document.getElementById("mealInfo").value = arr[display].food
+    document.getElementById("extraInfo").value = arr[display].extras
+}
+function update(){
+    for(let i = 0; i < ids.length; i++){
+        (arr[i])[i] = document.getElementById(arr2[i]).value
+    }
+    console.log("Doug")
+}
 function print() {
     space = "";
     for (let i = 0; i < arr.length; i++) {
-        space += `<div><span>${arr[i].id}</span>${arr[i].firstName} ${arr[i].lastName}</div>`
+        space += `<button onclick="display(${i})"><span>${arr[i].id}</span>${arr[i].firstName} ${arr[i].lastName}</button>`
     }
     document.getElementById("printSpace").innerHTML = space;
     console.log(arr)
 }
- 
-// work in progress
-// function populate() {
-//     var select = document.getElementById("selectNumber");
-//     select.innerHTML = `<option>Choose a number</option>`
-//     for (var i = 0; i < arr.length; i++) {
-//         select.innerHTML += `<option value = "${arr[i].firstName}">${arr[i].firstName}</option>`
-//     }
-// }

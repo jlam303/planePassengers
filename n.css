@@ -12,3 +12,12 @@ span {
     display: flex;
     flex-direction: column;
 }
+.row2{
+    display: flex;
+}
+.row2 > input{
+    width: 7vw;
+}
+.row2 > label{
+    width: 7vw;
+}

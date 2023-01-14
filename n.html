@@ -33,7 +33,7 @@
         <input type="radio" name="food" value="vegetarian" id="vegetarian">
         <label for="vegetarian">Vegetarian</label>
 
-        <input type="checkbox" name="extras" value="elg" id="leg">
+        <input type="checkbox" name="extras" value="leg" id="leg">
         <label for="leg">Extra Leg Room</label>
         <input type="checkbox" name="extras" value="win" id="window">
         <label for="window">Window Seat</label>
@@ -47,13 +47,40 @@
         <button onclick="addToList()">add</button>
         <button onclick="print()">print</button>
     </div>
-    
-    <!-- work in progress -->
-    <!-- <select onclick="populate()" id="selectNumber">
-            <option>Choose a number</option>
-        </select> -->
-    
     <div id="printSpace"></div>
+    <select name="sort" id="sort">
+        <option value="volvo">IDS</option>
+        <option value="lName">Last Name</option>
+        <option value="fName">First Name</option>
+    </select>
+    <button>Search</button>
+    <div class="row2">
+        
+        <label for="firstNameInfo">First Name:</label>
+        <input type="text" id="firstNameInfo">
+        <label for="lastNameInfo">Last Name:</label>
+        <input type="text" id="lastNameInfo">
+        <label for="dobInfo">Birth Date:</label>
+        <input type="date" id="dobInfo" required>
+        <label for="dCInfo">Departure City:</label>
+        <input type="text" id="dCInfo" required>
+        <label for="aCInfo">Arrival City:</label>
+        <input type="text" id="aCInfo" required>
+        <label for="dDInfo">Departure Date:</label>
+        <input type="date" id="dDInfo" required>
+        <label for="rDInfo">Arrival Date:</label>
+        <input type="date" id="rDInfo" required>
+        <label for="bagsInfo">Bags:</label>
+        <input type="text" id="bagsInfo" required>
+    </div>
+    <div class="row2">
+
+        <label for="mealInfo">Meal Type:</label>
+        <input type="text" name="mealInfo" id="mealInfo">
+        <label for="extraInfo">Extras:</label>
+        <input type="text" name="extraInfo" id="extraInfo">
+        <button onclick="update()">Submit</button>
+    </div>
     <script src="notes.js"></script>
 </body>
 </html>
