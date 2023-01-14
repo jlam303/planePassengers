@@ -99,6 +99,8 @@ function updateT(){
         console.log(ID)
         arr[ID][b] = document.getElementById(arr2[e]).value
     }
+    arr[ID].food = document.getElementById("mealInfo").value
+    arr[ID].extras = document.getElementById("extraInfo").value
 }
 
 function print() {
