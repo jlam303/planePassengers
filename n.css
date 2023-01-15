@@ -11,7 +11,6 @@ span {
 }
 .row{
     display: flex;
-    flex-direction: column;
 }
 .row2{
     display: flex;
