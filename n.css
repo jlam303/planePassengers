@@ -1,6 +1,11 @@
 html {
     background-color: #000000;
     color: white;
+    overflow-x: hidden;
+    font-size: 2.2vmin;
+}
+body{
+    width: 100vw;
 }
 
 span {
@@ -9,15 +14,9 @@ span {
     margin-left: 20px;
     margin-right: 20px;
 }
-.row{
-    display: flex;
-}
-.row2{
-    display: flex;
-}
-.row2 > input{
-    width: 7vw;
-    font-size: large;
+input{
+    width: 8vw;
+    font-size: 2.2vmin;
 }
 .row2 > label{
     width: 5vw;
